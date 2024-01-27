@@ -35,12 +35,19 @@ print(full_name_list)
 # is there a way to use the print function to display the list values and store the names without concantenation
 # print(full_name_list[0:]) prints first name and excludes last
 
+# TO DO: add to list, remove list, extract and put into an f-string
+# list slicing
+
 full_name_1 = ['leticia', 'santos']
 print(full_name_1)
 
 # take the variables and now store the values in a dictionary, using the keys 'first' and 'last'
+# key: values
 
-full_name_dictionary = {'first': 'Leticia', 'last': 'Santos'}
+full_name_dictionary = {
+    'first': 'Leticia',
+    'last': 'Santos'
+}
 
 # display the dictionary values
 print(type(full_name_dictionary))
