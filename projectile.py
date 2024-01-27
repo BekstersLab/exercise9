@@ -1,26 +1,10 @@
+# Practice with complex maths
 from math import pi, tan, cos
+# import math - math.pi
 
-
-# Practice with complex maths
-
-# gravity = pow(9.81, 2)
-# initial_vorticity = 44
-# theta = 80 * (pi/80)
-# distance = 0.5
-# height = 1
-# x = pi
-
-y = 1 + 0.5*tan(80*(pi/180)) - pow(9.81, 2) / 2*pow(44*cos(80*(pi/180)), 2)
-print(y)
-
-
-# TO DO: Method and Modules
-# Practice with complex maths
-
-# import the math module to be able to use pi, tan (tangent) and cos (cosine) in calculation
-import math
 # print math.pi to check pi is working - shows 3.141592653589793
-print(f"pi = {math.pi}")
+# print(f"pi = {math.pi}")
+print(f"pi = {pi}")
 
 # declare the variables as per the instructions given above:
 # declaring the height of the barrel (y0) as 1 meter
@@ -31,7 +15,8 @@ x = 0.5
 
 # theta = deg * (pi/180) from instructions =
 # theta = 80 * (3.141592653589793 / 180)
-theta = 80 * (math.pi / 180)
+# theta = 80 * (math.pi / 180)
+theta = 80 * (pi / 180)
 # printing the value of theta determined by the above calculation
 print(f"theta = {theta}")
 
@@ -42,7 +27,10 @@ g = 9.81
 v0 = 44
 
 # the equation written in python (I hope this is correct!)
-y = y0 + x * math.tan(theta) - ((g * x**2) / (2 * (v0 * math.cos(theta)))**2)
+# y = y0 + x * math.tan(theta) - ((g * x**2) / (2 * (v0 * math.cos(theta)))**2)
+
+y = y0 + x * tan(theta) - ((g * x**2) / (2 * (v0 * cos(theta)))**2)
+
 # math.tan() function returns the tangent of value passed as argument
 # math.cos() function returns the cosine of value passed as argument
 
@@ -54,6 +42,11 @@ y_rounded2 = round(y, 2)
 
 # print y rounded to 2dp, which is the outcome of the calculation
 print(f"the height of the projectile is {y_rounded2} meters")
+
+# hard coded the values - to make of my code and thinking steps 
+y = 1 + 0.5*tan(80*(pi/180)) - pow(9.81, 2) / 2*pow(44*cos(80*(pi/180)), 2)
+
+print(y)
 
 # //////// ORIGINAL QUESTION ////////
 
