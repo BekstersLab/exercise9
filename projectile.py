@@ -1,6 +1,9 @@
 # Practice with complex maths
 from math import pi, tan, cos
-# import math - math.pi
+# import math - do not use as will need to input math.pi, math.tan, math.cos (bek original import method)
+
+# Write a python program to answer the following question:
+# At a barrel height of 1m, after a horizontal distance of 0.5m, an elevation of 80 degrees and an initial velocity of 44 m/s, what is the height of the projectile?
 
 # print math.pi to check pi is working - shows 3.141592653589793
 # print(f"pi = {math.pi}")
@@ -26,13 +29,23 @@ g = 9.81
 # declaring the initial velocity (v0) as 44 m/s
 v0 = 44
 
-# the equation written in python (I hope this is correct!)
+# version 1 - WRONG Gives answer of y = 3.8251381553649444 (CLOSE)
+# the equation written in python (I hope this is correct!) Original version using import math
 # y = y0 + x * math.tan(theta) - ((g * x**2) / (2 * (v0 * math.cos(theta)))**2)
 
-y = y0 + x * tan(theta) - ((g * x**2) / (2 * (v0 * cos(theta)))**2)
+# updated version using 'from math import pi, tan, cos' - leticia's import method!
+# y = y0 + x * tan(theta) - ((g * x**2) / (2 * (v0 * cos(theta)))**2)
 
-# math.tan() function returns the tangent of value passed as argument
-# math.cos() function returns the cosine of value passed as argument
+# tan() function returns the tangent of value passed as argument
+# cos() function returns the cosine of value passed as argument
+
+# version 2 - WRONG! Gives answer of y = 3.732608888714104
+# y = y0 + x * tan(theta) - ((g * x)**2 / (2 * (v0 * cos(theta)))**2)
+
+# Apparently this is the correct answer and I got to it knowing the answer should be 3.81.
+# I wouldn't have known to write the equation out like this from the given diagram! I am not good at maths!!!
+# version 3
+y = y0 + x * tan(theta) - ((g * x**2) / (2 * v0**2 * cos(theta)**2))
 
 # print the answer
 print(f"y = {y}")
@@ -41,7 +54,9 @@ print(f"y = {y}")
 y_rounded2 = round(y, 2)
 
 # print y rounded to 2dp, which is the outcome of the calculation
-print(f"the height of the projectile is {y_rounded2} meters")
+print(f"{y_rounded2} meters is the height of a projectile at a horizontal distance of 0.5 meters, given a starting height of 1 meter, an elevation of 80 degrees and an initial velocity of 44 meters per second")
+
+# ---------- Leticia code -------------
 
 # hard coded the values - to make of my code and thinking steps 
 y = 1 + 0.5*tan(80*(pi/180)) - pow(9.81, 2) / 2*pow(44*cos(80*(pi/180)), 2)
@@ -71,8 +86,6 @@ theta = deg * (pi/180)
 You will need to import some math methods:
 
 from math import pi, tan, cos
-
-BEK NOTE: not sure how to include the image of equation. I think I have correctly written out in code below
 
 '''
 
