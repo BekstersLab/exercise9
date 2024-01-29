@@ -1,8 +1,8 @@
 # Practice with methods and functions
-# https://www.sololearn.com/en/Discuss/2236259/how-to-assign-input-value-to-a-variable-in-python
 
 
 #  EXERCISE a - print the value of var as upper case
+# input function allows user to input a prompt which defines the variable
 #  Use .upper() string method in a print function to convert all input letters to capitals
 var = input("Please enter a value: ").upper()
 
@@ -17,6 +17,7 @@ print(len(var))
 
 # EXERCISE c - does it contain numeric characters? (try the isdecimal() method)
 # returns boolean value True if the input string contains ALL decimal characters,
+# Decimal characters are numbers from 0-9
 # otherwise it returns False
 print(var.isdecimal())
 

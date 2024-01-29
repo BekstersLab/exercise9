@@ -1,12 +1,17 @@
 # Practice with complex maths
+# from statement finds and compiles math module, allowing it to import the pi, tan and cos functions
 from math import pi, tan, cos
 # import math - do not use as will need to input math.pi, math.tan, math.cos (bek original import method)
 
 # Write a python program to answer the following question:
-# At a barrel height of 1m, after a horizontal distance of 0.5m, an elevation of 80 degrees and an initial velocity of 44 m/s, what is the height of the projectile?
+# At a barrel height of 1m, after a horizontal distance of 0.5m,
+# an elevation of 80 degrees and an initial velocity of 44 m/s, what is the height of the projectile?
 
-# print math.pi to check pi is working - shows 3.141592653589793
+# print pi to check pi is working - shows 3.141592653589793
 # print(f"pi = {math.pi}")
+# f-string used to interpolate and format strings
+# interpolation - process substituting values of variables into placeholders in a string
+# f-string = formatting sting literals = provides a way to embed expressions inside string literals
 print(f"pi = {pi}")
 
 # declare the variables as per the instructions given above:
