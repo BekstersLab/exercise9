@@ -1,6 +1,5 @@
 # Practice declaring variables and using different types
 
-
 # EXERCISE: create two variables: one containing your first name and another containing your last name
 # Assigned a string value to each variable ''
 # variables are containers for storing data value
@@ -33,11 +32,15 @@ print(full_name)
 print(full_name, full_name1)
 print(type(full_name))
 
+# adding variable values into a list...
+full_name2 = [first_name, last_name]
+print(full_name2)
+
 # Lists are mutable, therefore values can change
 # index 0 = leticia and index 1 = santos
 # if I were to get married I would change the string value of index 1
-full_name1[1] = "Odigili"
-print(full_name1)
+full_name2[1] = "Odigili"
+print(full_name2)
 
 # EXERCISE: take the variables and now store the values in a dictionary, using the keys 'first' and 'last'
 # create a new variable for the dictionary name eg. name
